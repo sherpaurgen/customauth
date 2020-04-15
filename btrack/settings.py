@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'issue',
 
 ]
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -122,4 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/asset/'
+STATICFILES_DIRS=[
+   os.path.join(BASE_DIR, 'repo'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'asset')
+
